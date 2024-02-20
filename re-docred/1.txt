@@ -1,4 +1,0 @@
-title 标题
-vertexSet 实体（entity level，name不同是因为具体mention不同）
-labels 关系
-sents 文章内容
