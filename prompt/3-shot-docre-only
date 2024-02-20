@@ -1,0 +1,144 @@
+Given a document in which all entity mentions have been marked, please identify all relation types between any two different entities based on the context of the document. The scope of target relation types for identification is limited to these 96 types (separated by semicolons): head of government; country; place of birth; place of death; father; mother; spouse; country of citizenship; continent; instance of; head of state; capital; official language; position held; child; author; member of sports team; director; screenwriter; educated at; composer; member of political party; employer; founded by; league; publisher; owned by; located in the administrative territorial entity; genre; operator; religion; contains administrative territorial entity; follows; followed by; headquarters location; cast member; producer; award received; creator; parent taxon; ethnic group; performer; manufacturer; developer; series; sister city; legislative body; basin country; located in or next to body of water; military branch; record label; production company; location; subclass of; subsidiary; part of; original language of work; platform; mouth of the watercourse; original network; member of; chairperson; country of origin; has part; residence; date of birth; date of death; inception; dissolved, abolished or demolished; publication date; start time; end time; point in time; conflict; characters; lyrics by; located on terrain feature; participant; influenced by; location of formation; parent organization; notable work; separated from; narrative location; work location; applies to jurisdiction; product or material produced; unemployment rate; territory claimed by; participant of; replaces; replaced by; capital of; languages spoken, written or signed; present in work; sibling. Entities in the document are numbered in the order of their first mention, and each entity mention is enclosed in the corresponding entity number. Before the test document, 3 example documents and their expected outputs are provided. Please output the extraction results of the test document in the same format as the examples, i.e., each line outputs an extracted relation triple, and the format of each triple is: <subject entity number; relation type; object entity number>. Each relation triple should be output only once.
+
+Example document 1:
+" [1] Lily of the Valley [1] " is a song by [2] British [2] rock band [3] Queen [3] . Lead singer [4] Freddie Mercury [4] plays the piano and provides all the vocals on the track . It was originally featured on [3] Queen [3] 's third album , [5] Sheer Heart Attack [5] , released in 1974 , and is one of the album 's few ballads . In [7] 1975 [7] , " [1] Lily of the Valley [1] " was released as the B - side of different singles in the [2] U.K. [2] and the [8] United States [8] . The [2] U.K. [2] single was " [9] Now I 'm Here [9] " , and the [8] U.S. [8] single was a reissue of " [10] Keep Yourself Alive [10] " . The lyrics refer back to a song from a previous album , " [11] Seven Seas of Rhye [11] " from [12] Queen II [12] , with the line " messenger from [13] Seven Seas [13] has flown , to tell the [14] King of Rhye [14] he 's lost his throne . " In a [15] 1999 [15] interview , [16] Brian May [16] told the [2] British [2] music magazine [17] Mojo [17] , " [4] Freddie [4] 's stuff was so heavily cloaked , lyrically ... But you could find out , just from little insights , that a lot of his private thoughts were in there , although a lot of the more meaningful stuff was not very accessible . [1] Lily of the Valley [1] was utterly heartfelt . It 's about looking at his girlfriend and realising that his body needed to be somewhere else . It 's a great piece of art , but it 's the last song that would ever be a hit . " Actor [18] Rami Malek [18] ( who is portraying [4] Freddie Mercury [4] in the upcoming [19] Queen [19] biopic [20] Bohemian Rhapsody [20] ) revealed on [21] The Late Show [21] with [22] Stephen Colbert [22] that " [1] Lily of the Valley [1] " is his favorite [19] Queen [19] song .
+All relation triples extracted from the document:
+<[1]; performer; [3]>
+<[1]; lyrics by; [4]>
+<[1]; composer; [4]>
+<[1]; part of; [5]>
+<[1]; publication date;>
+<[3]; notable work; [1]>
+<[3]; country; [2]>
+<[3]; country of citizenship; [2]>
+<[3]; located in the administrative territorial entity; [2]>
+<[3]; has part; [4]>
+<[3]; notable work; [5]>
+<[3]; notable work; [9]>
+<[3]; notable work; [10]>
+<[3]; notable work; [11]>
+<[3]; notable work; [12]>
+<[4]; notable work; [1]>
+<[4]; country of citizenship; [2]>
+<[4]; member of; [3]>
+<[4]; part of; [3]>
+<[4]; part of; [19]>
+<[5]; has part; [1]>
+<[5]; performer; [3]>
+<[5]; producer; [3]>
+<[5]; publication date;>
+<[5]; has part; [9]>
+<[5]; has part; [10]>
+<[5]; follows; [12]>
+<[5]; producer; [19]>
+<[9]; performer; [3]>
+<[9]; part of; [5]>
+<[10]; performer; [3]>
+<[10]; part of; [5]>
+<[11]; performer; [3]>
+<[11]; part of; [12]>
+<[12]; performer; [3]>
+<[12]; producer; [3]>
+<[12]; followed by; [5]>
+<[12]; has part; [11]>
+<[16]; country of citizenship; [2]>
+<[16]; member of; [3]>
+<[17]; country of origin; [2]>
+<[19]; country of origin; [2]>
+<[19]; has part; [4]>
+<[19]; notable work; [5]>
+<[20]; country of origin; [2]>
+<[20]; cast member; [18]>
+
+Example document 2:
+The [1] [1] [1] Paskačić [1] [1] [1] ( [2] [2] [2] Serbian Cyrillic [2] [2] [2] : [3] [3] [3] Паскачић [3] [3] [3] , [4] [4] [4] Paskačići [4] [4] [4] / [5] [5] [5] Паскачићи [5] [5] [5] ) was a Serbian noble house that served the Serbian Empire , of [7] Dušan the Mighty [7] ( r. [8] 1331 [8] - [9] 1355 [9] ) and [10] Uroš the Weak [10] ( r. [9] 1355 [9] - [11] 1371 [11] ) , then the [12] Mrnjavčević [12] ' Lordship of [13] Prilep [13] ( [11] 1371 [11] – [14] 1395 [14] ) during the [15] Fall of the Serbian Empire [15] . The eponymous founder was [16] kefalija Paskač [16] , and the family base was in [17] Slavište [17] ( modern [17] Macedonia [17] ) and they held the modern border region between Serbia and the latter . [16] Paskač [16] had a son , [18] Vlatko Paskačić [18] , ( hence , the family is also known as [19] Vlatković [19] ( [2] [2] [2] Serbian Cyrillic [2] [2] [2] : [19] Влатковић [19] , [19] Vlatkovići [19] / [19] Влатковићи [19] ) ) who received the title of sevastokrator in [20] 1365 [20] , when [21] Vukašin Mrnjavčević [21] was declared co - ruler as King of [22] [22] [22] Serbs [22] [22] [22] and [23] [23] [23] Greeks [23] [23] [23] .
+All relation triples extracted from the document:
+<[2]; country;>
+<[7]; country of citizenship;>
+<[7]; ethnic group;>
+<[7]; point in time; [8]>
+<[7]; date of death; [9]>
+<[10]; country of citizenship;>
+<[10]; ethnic group;>
+<[10]; date of death; [11]>
+<[12]; dissolved, abolished or demolished; [14]>
+<[12]; founded by; [21]>
+<[13]; country;>
+<[13]; located in the administrative territorial entity;>
+<[16]; child; [18]>
+<[17]; country;>
+<[17]; located in the administrative territorial entity;>
+<[18]; country of citizenship;>
+<[18]; father; [16]>
+<[21]; country of citizenship;>
+
+Example document 3:
+The [1] Peace Arch Border Crossing [1] connects the towns of [2] Blaine [2] , [3] Washington [3] and [4] Surrey [4] , [5] British Columbia [5] on the [4] Canada [4] – United States border . The crossing is reached by [7] Interstate 5 [7] on the American side and by [8] British Columbia Highway 99 [8] on the [9] Canadian [9] side . It serves the most direct route between the major cities of [10] Seattle [10] , [3] Washington [3] and [11] Vancouver [11] , [5] British Columbia [5] , and the crossing is the third - busiest on the border with up to [12] 4,800 [12] cars a day . Wait times can be up to [13] four hours [13] ; traffic lights exist on the southbound lane , with timers showing when the light will turn green so drivers can turn off engines , visit the park , and use public restrooms . Between the [14] two [14] border stations sits the [15] Peace Arch Park [15] , where visitors are free to cross the border within the confines of the park . Border inspection services at this crossing long predated the [16] 1921 [16] construction of the [17] Peace Arch [17] . The [4] Canada [4] border station is known as " [4] Douglas [4] " , although it has been known over the years as " [4] White Rock [4] " and " [4] Surrey [4] " . The [18] US [18] border station is known as " [18] Blaine - Peace Arch [18] " . The crossing is less than [19] a mile [19] west of the [20] Pacific Highway Border Crossing [20] ; trucks and other commercial vehicles have been prohibited from using the [17] Peace Arch [17] crossing since [21] the 1970s [21] , in an effort to improve the visitation experience of the park .
+All relation triples extracted from the document:
+<[1]; country; [4]>
+<[1]; located in the administrative territorial entity; [4]>
+<[1]; located in the administrative territorial entity; [5]>
+<[1]; country;>
+<[1]; located in the administrative territorial entity;>
+<[1]; country; [9]>
+<[1]; located in the administrative territorial entity; [9]>
+<[2]; country;>
+<[2]; located in the administrative territorial entity;>
+<[3]; country;>
+<[3]; located in the administrative territorial entity;>
+<[4]; contains administrative territorial entity; [5]>
+<[4]; located in the administrative territorial entity; [5]>
+<[4]; country; [9]>
+<[4]; located in the administrative territorial entity; [9]>
+<[5]; country; [4]>
+<[5]; located in the administrative territorial entity; [4]>
+<[5]; located in the administrative territorial entity; [9]>
+<[5]; country; [9]>
+<[6]; contains administrative territorial entity; [3]>
+<[7]; located in the administrative territorial entity; [3]>
+<[7]; country;>
+<[7]; located in the administrative territorial entity;>
+<[8]; country; [4]>
+<[8]; located in the administrative territorial entity; [4]>
+<[8]; located in the administrative territorial entity; [5]>
+<[8]; country; [9]>
+<[8]; located in the administrative territorial entity; [9]>
+<[9]; contains administrative territorial entity; [5]>
+<[10]; country;>
+<[10]; located in the administrative territorial entity;>
+<[11]; country; [4]>
+<[11]; located in the administrative territorial entity; [4]>
+<[11]; located in the administrative territorial entity; [5]>
+<[11]; country; [9]>
+<[11]; located in the administrative territorial entity; [9]>
+<[15]; located in the administrative territorial entity; [3]>
+<[15]; country; [4]>
+<[15]; located in the administrative territorial entity; [4]>
+<[15]; located in the administrative territorial entity; [5]>
+<[15]; country;>
+<[15]; located in the administrative territorial entity;>
+<[15]; located in the administrative territorial entity; [9]>
+<[15]; inception; [16]>
+<[15]; has part; [17]>
+<[17]; located in the administrative territorial entity; [2]>
+<[17]; located in the administrative territorial entity; [3]>
+<[17]; country; [4]>
+<[17]; located in the administrative territorial entity; [4]>
+<[17]; located in the administrative territorial entity; [5]>
+<[17]; country;>
+<[17]; located in the administrative territorial entity;>
+<[17]; located in the administrative territorial entity; [9]>
+<[17]; part of; [15]>
+<[17]; inception; [16]>
+<[18]; country;>
+<[18]; located in the administrative territorial entity;>
+<[20]; country; [4]>
+<[20]; located in the administrative territorial entity; [4]>
+<[20]; located in the administrative territorial entity; [5]>
+<[20]; country;>
+<[20]; located in the administrative territorial entity;>
+<[20]; located in the administrative territorial entity; [9]>
+
+Test document:
+The [1] Loud Tour [1] was the fourth overall and third world concert tour by [2] Barbadian [2] recording artist [3] Rihanna [3] . Performing in over [4] twenty [4] countries in the [5] Americas [5] and Europe , the tour was launched in support of [3] Rihanna [3] 's fifth studio album [1] Loud [1] ( [7] 2010 [7] ) . Critics acclaimed the show for its liveliness and higher caliber of quality when compared to [3] Rihanna [3] 's previous tours . The [1] Loud Tour [1] was a large commercial success , experiencing demand for an extension of shows in the [8] United Kingdom [8] due to popularity . In [9] London [9] , [3] Rihanna [3] played a record breaking [10] 10 [10] dates at [11] The O2 Arena [11] . The tour ultimately grossed an estimated value of [12] US$ 90 million [12] from [13] 98 [13] reported shows and a total audience of [14] 1,200,800 [14] . The [1] Loud Tour [1] became the seventh - highest grossing tour of [15] 2011 [15] .
+All relation triples extracted from the document:

@@ -1,0 +1,144 @@
+Given a document in which all entity mentions have not been marked, please identify all relation types between any two different entities based on the context of the document. The scope of target relation types for identification is limited to these 96 types (separated by semicolons): head of government; country; place of birth; place of death; father; mother; spouse; country of citizenship; continent; instance of; head of state; capital; official language; position held; child; author; member of sports team; director; screenwriter; educated at; composer; member of political party; employer; founded by; league; publisher; owned by; located in the administrative territorial entity; genre; operator; religion; contains administrative territorial entity; follows; followed by; headquarters location; cast member; producer; award received; creator; parent taxon; ethnic group; performer; manufacturer; developer; series; sister city; legislative body; basin country; located in or next to body of water; military branch; record label; production company; location; subclass of; subsidiary; part of; original language of work; platform; mouth of the watercourse; original network; member of; chairperson; country of origin; has part; residence; date of birth; date of death; inception; dissolved, abolished or demolished; publication date; start time; end time; point in time; conflict; characters; lyrics by; located on terrain feature; participant; influenced by; location of formation; parent organization; notable work; separated from; narrative location; work location; applies to jurisdiction; product or material produced; unemployment rate; territory claimed by; participant of; replaces; replaced by; capital of; languages spoken, written or signed; present in work; sibling. Before the test document, 3 example documents and their expected outputs are provided. Please output the extraction results of the test document in the same format as the examples, i.e., each line outputs an extracted relation triple, and the format of each triple is: <subject entit; relation type; object entity>. Each relation triple should be output only once.
+
+Example document 1:
+" Lily of the Valley " is a song by British rock band Queen . Lead singer Freddie Mercury plays the piano and provides all the vocals on the track . It was originally featured on Queen 's third album , Sheer Heart Attack , released in 1974 , and is one of the album 's few ballads . In 1975 , " Lily of the Valley " was released as the B - side of different singles in the U.K. and the  I United States . The U.K. single was " Now I 'm Here " , and the U.S. single was a reissue of " Keep Yourself Alive " . The lyrics refer back to a song from a previous album , " Seven Seas of Rhye " from Queen II , with the line " messenger from Seven Seas has flown , to tell the King of Rhye he 's lost his throne . " In a 1999 interview , 16 told the British music magazine Mojo , " Freddie 's stuff was so heavily cloaked , lyrically ... But you could find out , just from little insights , that a lot of his private thoughts were in there , although a lot of the more meaningful stuff was not very accessible . Lily of the Valley was utterly heartfelt . It 's about looking at his girlfriend and realising that his body needed to be somewhere else . It 's a great piece of art , but it 's the last song that would ever be a hit . " Actor Rami Malek ( who is portraying Freddie Mercury in the upcoming Queen biopic Bohemian Rhapsody ) revealed on The Late Show with Stephen Colbert that " Lily of the Valley " is his favorite Queen song .
+All relation triples extracted from the document:
+<Lily of the Valley; performer; Queen>
+<Lily of the Valley; lyrics by; Freddie Mercury>
+<Lily of the Valley; composer; Freddie Mercury>
+<Lily of the Valley; part of; Sheer Heart Attack>
+<Lily of the Valley; publication date; 1974>
+<Queen; notable work; Lily of the Valley>
+<Queen; country; British>
+<Queen; country of citizenship; British>
+<Queen; located in the administrative territorial entity; British>
+<Queen; has part; Freddie Mercury>
+<Queen; notable work; Sheer Heart Attack>
+<Queen; notable work; Now I'm Here>
+<Queen; notable work; Keep Yourself Alive>
+<Queen; notable work; Seven Seas of Ryhe>
+<Queen; notable work; Queen II>
+<Freddie Mercury; notable work; Lily of the Valley>
+<Freddie Mercury; country of citizenship; British>
+<Freddie Mercury; member of; Queen>
+<Freddie Mercury; part of; Queen>
+<Freddie Mercury; part of; Queen>
+<Sheer Heart Attack; has part; Lily of the Valley>
+<Sheer Heart Attack; performer; Queen>
+<Sheer Heart Attack; producer; Queen>
+<Sheer Heart Attack; publication date; 1974>
+<Sheer Heart Attack; has part; Now I'm Here>
+<Sheer Heart Attack; has part; Keep Yourself Alive>
+<Sheer Heart Attack; follows; Queen II>
+<Sheer Heart Attack; producer; Queen>
+<Now I'm Here; performer; Queen>
+<Now I'm Here; part of; Sheer Heart Attack>
+<Keep Yourself Alive; performer; Queen>
+<Keep Yourself Alive; part of; Sheer Heart Attack>
+<Seven Seas of Ryhe; performer; Queen>
+<Seven Seas of Ryhe; part of; Queen II>
+<Queen II; performer; Queen>
+<Queen II; producer; Queen>
+<Queen II; followed by; Sheer Heart Attack>
+<Queen II; has part; Seven Seas of Ryhe>
+<Brian May; country of citizenship; British>
+<Brian May; member of; Queen>
+<Mojo; country of origin; British>
+<Queen; country of origin; British>
+<Queen; has part; Freddie Mercury>
+<Queen; notable work; Sheer Heart Attack>
+<Bohemian Rhapsody; country of origin; British>
+<Bohemian Rhapsody; cast member; Rami Malek>
+
+Example document 2:
+The Paskačić ( Serbian Cyrillic : Паскачић , Paskačići / Паскачићи ) was a Serbian noble house that served the Serbian Empire , of Dušan the Mighty ( r. 1331 - 1355 ) and Uroš the Weak ( r. 1355 - 1371 ) , then Mrnjavčević ' Lordship of Prilep ( 1371 – 1395 ) during the Fall of the Serbian Empire . The eponymous founder was kefalija Paskač , and the family base was in Slavište ( modern Macedonia ) and they held the modern border region between Serbia and the latter . Paskač had a son , Vlatko Paskačić , ( hence , the family is also known as Vlatković ( Serbian Cyrillic : Влатковић , Vlatkovići / Влатковићи ) ) who received the title of sevastokrator in 1365 , when Vukašin Mrnjavčević was declared co - ruler as King of Serbs and Greeks .
+All relation triples extracted from the document:
+<Serbian Cyrillic; country; Serbian>
+<Dušan the Mighty; country of citizenship; Serbian>
+<Dušan the Mighty; ethnic group; Serbian>
+<Dušan the Mighty; point in time; 1331>
+<Dušan the Mighty; date of death; 1355>
+<Uroš the Weak; country of citizenship; Serbian>
+<Uroš the Weak; ethnic group; Serbian>
+<Uroš the Weak; date of death; 1371>
+<Mrnjavčević; dissolved, abolished or demolished; 1395>
+<Mrnjavčević; founded by; Vukašin Mrnjavčević>
+<Prilep; country; Serbian>
+<Prilep; located in the administrative territorial entity; Serbian>
+<kefalija Paskač; child; Vlatko Paskačić>
+<Slavište; country; Serbian>
+<Slavište; located in the administrative territorial entity; Serbian>
+<Vlatko Paskačić; country of citizenship; Serbian>
+<Vlatko Paskačić; father; kefalija Paskač>
+<Vukašin Mrnjavčević; country of citizenship; Serbian>
+
+Example document 3:
+The Peace Arch Border Crossing connects the towns of Blaine , Washington and Surrey , British Columbia on the Canada – United States border . The crossing is reached by Interstate 5 on the American side and by British Columbia Highway 99 on the Canadian side . It serves the most direct route between the major cities of Seattle , Washington and Vancouver , British Columbia , and the crossing is the third - busiest on the border with up to 4,800 cars a day . Wait times can be up to four hours ; traffic lights exist on the southbound lane , with timers showing when the light will turn green so drivers can turn off engines , visit the park , and use public restrooms . Between the two border stations sits the Peace Arch Park Peace Arch Park , where visitors are free to cross the border within the confines of the park . Border inspection services at this crossing long predated the 1921 construction of the Peace Arch . The Canada border station is known as " Douglas " , although it has been known over the years as " White Rock " and " Surrey " . The US border station is known as " Blaine - Peace Arch " . The crossing is less than a mile west of the Pacific Highway Border Crossing ; trucks and other commercial vehicles have been prohibited from using the Peace Arch crossing since the 1970s , in an effort to improve the visitation experience of the park .
+All relation triples extracted from the document:
+<Peace Arch Border Crossing; country; Canada>
+<Peace Arch Border Crossing; located in the administrative territorial entity; Canada>
+<Peace Arch Border Crossing; located in the administrative territorial entity; British Columbia>
+<Peace Arch Border Crossing; country; American>
+<Peace Arch Border Crossing; located in the administrative territorial entity; American>
+<Peace Arch Border Crossing; country; Canadian>
+<Peace Arch Border Crossing; located in the administrative territorial entity; Canadian>
+<Blaine; country; American>
+<Blaine; located in the administrative territorial entity; American>
+<Washington; country; American>
+<Washington; located in the administrative territorial entity; American>
+<Canada; contains administrative territorial entity; British Columbia>
+<Canada; located in the administrative territorial entity; British Columbia>
+<Canada; country; Canadian>
+<Canada; located in the administrative territorial entity; Canadian>
+<British Columbia; country; Canada>
+<British Columbia; located in the administrative territorial entity; Canada>
+<British Columbia; located in the administrative territorial entity; Canadian>
+<British Columbia; country; Canadian>
+<United States; contains administrative territorial entity; Washington>
+<Interstate 5; located in the administrative territorial entity; Washington>
+<Interstate 5; country; United States>
+<Interstate 5; located in the administrative territorial entity; United States>
+<British Columbia Highway 99; country; Canada>
+<British Columbia Highway 99; located in the administrative territorial entity; Canada>
+<British Columbia Highway 99; located in the administrative territorial entity; British Columbia>
+<British Columbia Highway 99; country; Canadian>
+<British Columbia Highway 99; located in the administrative territorial entity; Canadian>
+<Canadian; contains administrative territorial entity; British Columbia>
+<Seattle; country; United States>
+<Seattle; located in the administrative territorial entity; United States>
+<Vancouver; country; Canada>
+<Vancouver; located in the administrative territorial entity; Canada>
+<Vancouver; located in the administrative territorial entity; British Columbia>
+<Vancouver; country; Canadian>
+<Vancouver; located in the administrative territorial entity; Canadian>
+<Peace Arch Park; located in the administrative territorial entity; Washington>
+<Peace Arch Park; country; Canada>
+<Peace Arch Park; located in the administrative territorial entity; Canada>
+<Peace Arch Park; located in the administrative territorial entity; British Columbia>
+<Peace Arch Park; country; United States>
+<Peace Arch Park; located in the administrative territorial entity; United States>
+<Peace Arch Park; located in the administrative territorial entity; Canadian>
+<Peace Arch Park; inception; 1921>
+<Peace Arch Park; has part; Peace Arch>
+<Peace Arch; located in the administrative territorial entity; Blaine>
+<Peace Arch; located in the administrative territorial entity; Washington>
+<Peace Arch; country; Canada>
+<Peace Arch; located in the administrative territorial entity; Canada>
+<Peace Arch; located in the administrative territorial entity; British Columbia>
+<Peace Arch; country; United States>
+<Peace Arch; located in the administrative territorial entity; United States>
+<Peace Arch; located in the administrative territorial entity; Canadian>
+<Peace Arch; part of; Peace Arch Park>
+<Peace Arch; inception; 1921>
+<Blaine - Peace Arch; country; United States>
+<Blaine - Peace Arch; located in the administrative territorial entity; United States>
+<Pacific Highway Border Crossing; country; Canada>
+<Pacific Highway Border Crossing; located in the administrative territorial entity; Canada>
+<Pacific Highway Border Crossing; located in the administrative territorial entity; British Columbia>
+<Pacific Highway Border Crossing; country; United States>
+<Pacific Highway Border Crossing; located in the administrative territorial entity; United States>
+<Pacific Highway Border Crossing; located in the administrative territorial entity; Canadian>
+
+Test document:
+The Loud Tour was the fourth overall and third world concert tour by Barbadian recording artist Rihanna . Performing in over twenty countries in the Americas and Europe , the tour was launched in support of Rihanna 's fifth studio album Loud ( 2010 ) . Critics acclaimed the show for its liveliness and higher caliber of quality when compared to Rihanna 's previous tours . The Loud Tour was a large commercial success , experiencing demand for an extension of shows in the United Kingdom due to popularity . In London , Rihanna played a record breaking 10 dates at The O2 Arena . The tour ultimately grossed an estimated value of US$ 90 million from 98 reported shows and a total audience of 1,200,800 . The Loud Tour became the seventh - highest grossing tour of 2011 .
+All relation triples extracted from the document:
